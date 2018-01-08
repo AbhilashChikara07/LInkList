@@ -18,13 +18,22 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DeleteLastNode" />
-        <activity android:name=".DeleteFirstNode" />
-        <activity android:name=".LinkListInsertion" />
-        <activity android:name=".InsertionAtBeginning" />
-        <activity android:name=".InsertNodeAtPosition" />
-        <activity android:name=".LinkListInsertNodeAtEnd" />
-        <activity android:name=".LinkListTraversingElement" />
+        <activity android:name=".SingleLinkList.DeleteLastNode" />
+        <activity android:name=".SingleLinkList.DeleteFirstNode" />
+        <activity android:name=".SingleLinkList.LinkListInsertion" />
+        <activity android:name=".SingleLinkList.InsertionAtBeginning" />
+        <activity android:name=".SingleLinkList.InsertNodeAtPosition" />
+        <activity android:name=".SingleLinkList.LinkListInsertNodeAtEnd" />
+        <activity android:name=".SingleLinkList.LinkListTraversingElement" />
+
+        <activity android:name=".DoubleLInkList.DoubleListActivity" />
+        <activity android:name=".DoubleLInkList.DoubleDeleteLastNode" />
+        <activity android:name=".DoubleLInkList.DoubleListInsertAtEnd" />
+        <activity android:name=".DoubleLInkList.DoubleListInsertElement" />
+        <activity android:name=".DoubleLInkList.DoubleDeletePositionNode" />
+        <activity android:name=".DoubleLInkList.DoubleDeleteFirstElement" />
+        <activity android:name=".DoubleLInkList.DoubleListInsertNodeAtMid" />
+        <activity android:name=".DoubleLInkList.DoubleInsertElementAtPosition" />
 
     </application>
 

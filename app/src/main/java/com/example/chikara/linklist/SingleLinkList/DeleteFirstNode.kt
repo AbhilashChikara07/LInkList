@@ -1,21 +1,23 @@
-package com.example.chikara.linklist
+package com.example.chikara.linklist.SingleLinkList
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.example.chikara.linklist.R
 
 /**
  * Created by chikara on 12/29/17.
  */
-class InsertNodeAtMiddle : AppCompatActivity() {
+class DeleteFirstNode : AppCompatActivity() {
 
-    var head: NodeClass? = null
+    private var head: NodeClass? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.link_list_layout)
         insertionElement()
-        insertElementAtMid()
+        deleteFirstNode()
+        displayValue()
     }
 
     inner class NodeClass(tempValue: Int) {
@@ -38,19 +40,14 @@ class InsertNodeAtMiddle : AppCompatActivity() {
         head!!.next!!.next!!.next!!.next = NodeClass(5)
     }
 
-    private fun insertElementAtMid() {
-        val tempNode = head
-        var position = 0
-        val totalCount = getTotalElementCount()
-        while (tempNode != null) {
-            if (position != totalCount / 2) {
-                var midNode = NodeClass(10)
-                midNode.next = tempNode.next
-                tempNode.next = midNode
-                displayValue()
-                break
-            } else {
-                position++
+    private fun deleteFirstNode() {
+        val tempHead = head
+        if (tempHead == null) {
+            head = NodeClass(1)
+        } else {
+            if (tempHead.next != null) {
+                head = tempHead.next
+                tempHead.next=null
             }
         }
     }
@@ -63,15 +60,6 @@ class InsertNodeAtMiddle : AppCompatActivity() {
             tempNode = tempNode.next
         }
         (findViewById<TextView>(R.id.displayElement) as TextView).text = sb.toString()
-    }
-
-    private fun getTotalElementCount(): Int {
-        val tempNode = head
-        var count: Int = 0
-        while (tempNode != null) {
-            count++
-        }
-        return count
     }
 
 }

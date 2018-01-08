@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
+import com.example.chikara.linklist.DoubleLInkList.DoubleListActivity
+import com.example.chikara.linklist.SingleLinkList.*
 
 /**
  * Created by chikara on 12/28/17.
@@ -16,56 +18,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        (findViewById<Button>(R.id.mDeleteLastNode)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mInsertNodeAtEnd)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mInsertNodeAtPos)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mDeleteFirstNode)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mLinkListInsertion)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mDeletePositionNode)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mLinkListTraversing)).setOnClickListener(this)
-        (findViewById<Button>(R.id.mInsertNodeAtBeginning)).setOnClickListener(this)
+        (findViewById<Button>(R.id.mSingleLinkList)).setOnClickListener(this)
+        (findViewById<Button>(R.id.mDoubleLinkList)).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.mLinkListInsertion -> {
+            R.id.mSingleLinkList -> {
                 val intent = Intent(this,
-                        LinkListInsertion::class.java)
+                        SingleListActivity::class.java)
                 startActivity(intent)
             }
-            R.id.mLinkListTraversing -> {
+            R.id.mDoubleLinkList -> {
                 val intent = Intent(this,
-                        LinkListTraversingElement::class.java)
-                startActivity(intent)
-            }
-            R.id.mInsertNodeAtBeginning -> {
-                val intent = Intent(this,
-                        InsertionAtBeginning::class.java)
-                startActivity(intent)
-            }
-            R.id.mInsertNodeAtEnd -> {
-                val intent = Intent(this,
-                        LinkListInsertNodeAtEnd::class.java)
-                startActivity(intent)
-            }
-            R.id.mInsertNodeAtPos -> {
-                val intent = Intent(this,
-                        InsertNodeAtPosition::class.java)
-                startActivity(intent)
-            }
-            R.id.mDeleteFirstNode -> {
-                val intent = Intent(this,
-                        DeleteFirstNode::class.java)
-                startActivity(intent)
-            }
-            R.id.mDeleteLastNode -> {
-                val intent = Intent(this,
-                        DeleteLastNode::class.java)
-                startActivity(intent)
-            }
-            R.id.mDeletePositionNode -> {
-                val intent = Intent(this,
-                        DeleteLastNode::class.java)
+                        DoubleListActivity::class.java)
                 startActivity(intent)
             }
         }

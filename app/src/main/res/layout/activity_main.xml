@@ -5,68 +5,19 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/mLinkListInsertion"
+        android:id="@+id/mSingleLinkList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Link List Insertion"
+        android:text="Single Link List"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/mLinkListTraversing"
+        android:id="@+id/mDoubleLinkList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Link List Traversing"
-        android:textStyle="bold" />
-
-
-    <Button
-        android:id="@+id/mInsertNodeAtBeginning"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Link List Insert Node At Beginning"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/mInsertNodeAtEnd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Link List Insert Node At End"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/mInsertNodeAtPos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Link List Insert Node At Position"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/mDeleteFirstNode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Link List Delete First Node"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/mDeleteLastNode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Link List Delete Last Node"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/mDeletePositionNode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Link List Delete Position Node"
+        android:text="Double Link List"
         android:textStyle="bold" />
 
 </LinearLayout>

@@ -1,13 +1,14 @@
-package com.example.chikara.linklist
+package com.example.chikara.linklist.SingleLinkList
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.example.chikara.linklist.R
 
 /**
  * Created by chikara on 12/29/17.
  */
-class LinkListInsertNodeAtEnd : AppCompatActivity() {
+class DeletePositionNode : AppCompatActivity() {
 
     var head: NodeClass? = null
 
@@ -25,6 +26,7 @@ class LinkListInsertNodeAtEnd : AppCompatActivity() {
             this.value = tempValue
             next = null
         }
+
     }
 
     private fun insertionElement() {
@@ -35,7 +37,19 @@ class LinkListInsertNodeAtEnd : AppCompatActivity() {
         head!!.next!!.next = NodeClass(3)
         head!!.next!!.next!!.next = NodeClass(4)
         head!!.next!!.next!!.next!!.next = NodeClass(5)
-        insertElementAtEnd()
+    }
+
+    private fun deleteLastNode() {
+        var tempHead = head
+        while (tempHead != null) {
+            if (tempHead.next!!.next == null) {
+                tempHead.next = null
+                displayValue()
+                break
+            } else {
+                tempHead = tempHead.next
+            }
+        }
     }
 
     private fun displayValue() {
@@ -48,17 +62,5 @@ class LinkListInsertNodeAtEnd : AppCompatActivity() {
         (findViewById<TextView>(R.id.displayElement) as TextView).text = sb.toString()
     }
 
-    private fun insertElementAtEnd() {
-        var tempNode = head
-        while (tempNode != null) {
-            if (tempNode.next == null) {
-                val lastNode = NodeClass(12)
-                tempNode.next = lastNode
-                displayValue()
 
-            } else {
-                tempNode = tempNode.next
-            }
-        }
-    }
 }

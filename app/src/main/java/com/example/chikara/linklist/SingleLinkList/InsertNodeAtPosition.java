@@ -1,10 +1,12 @@
-package com.example.chikara.linklist;
+package com.example.chikara.linklist.SingleLinkList;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.example.chikara.linklist.R;
 
 /**
  * Created by chikara on 12/29/17.

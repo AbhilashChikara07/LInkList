@@ -1,13 +1,14 @@
-package com.example.chikara.linklist
+package com.example.chikara.linklist.SingleLinkList
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.example.chikara.linklist.R
 
 /**
  * Created by chikara on 12/29/17.
  */
-class DeletePositionNode : AppCompatActivity() {
+class DeleteLastNode : AppCompatActivity() {
 
     var head: NodeClass? = null
 
@@ -15,6 +16,7 @@ class DeletePositionNode : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.link_list_layout)
         insertionElement()
+        deleteLastNode()
     }
 
     inner class NodeClass(tempValue: Int) {
@@ -45,7 +47,8 @@ class DeletePositionNode : AppCompatActivity() {
                 tempHead.next = null
                 displayValue()
                 break
-            } else {
+            }
+            else{
                 tempHead = tempHead.next
             }
         }
@@ -60,6 +63,5 @@ class DeletePositionNode : AppCompatActivity() {
         }
         (findViewById<TextView>(R.id.displayElement) as TextView).text = sb.toString()
     }
-
 
 }

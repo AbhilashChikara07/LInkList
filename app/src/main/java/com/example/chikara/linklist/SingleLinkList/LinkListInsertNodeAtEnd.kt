@@ -1,14 +1,16 @@
-package com.example.chikara.linklist
+package com.example.chikara.linklist.SingleLinkList
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.example.chikara.linklist.R
 
 /**
- * Created by chikara on 12/28/17.
+ * Created by chikara on 12/29/17.
  */
-class InsertionAtBeginning : AppCompatActivity() {
-    private var head: NodeClass? = null
+class LinkListInsertNodeAtEnd : AppCompatActivity() {
+
+    var head: NodeClass? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,13 +18,12 @@ class InsertionAtBeginning : AppCompatActivity() {
         insertionElement()
     }
 
-
-    internal class NodeClass(tempValue: Int) {
+    inner class NodeClass(tempValue: Int) {
         var next: NodeClass? = null
         var value: Int? = null
 
         init {
-            value = tempValue
+            this.value = tempValue
             next = null
         }
     }
@@ -35,24 +36,30 @@ class InsertionAtBeginning : AppCompatActivity() {
         head!!.next!!.next = NodeClass(3)
         head!!.next!!.next!!.next = NodeClass(4)
         head!!.next!!.next!!.next!!.next = NodeClass(5)
-        displayValue()
-        insertElementAtBeginning()
+        insertElementAtEnd()
     }
 
     private fun displayValue() {
         val sb = StringBuilder()
-        var tempHead = head
-        while (tempHead != null) {
-            sb.append(tempHead!!.value)
-            tempHead = tempHead!!.next
+        var tempNode = head
+        while (tempNode != null) {
+            sb.append(tempNode.value)
+            tempNode = tempNode.next
         }
         (findViewById<TextView>(R.id.displayElement) as TextView).text = sb.toString()
     }
 
-    private fun insertElementAtBeginning() {
-        val tempNode = NodeClass(10)
-        tempNode.next = head
-        head = tempNode
-        displayValue()
+    private fun insertElementAtEnd() {
+        var tempNode = head
+        while (tempNode != null) {
+            if (tempNode.next == null) {
+                val lastNode = NodeClass(12)
+                tempNode.next = lastNode
+                displayValue()
+
+            } else {
+                tempNode = tempNode.next
+            }
+        }
     }
 }
