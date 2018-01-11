@@ -20,4 +20,20 @@
         android:text="Double Link List"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/mSingleCircularList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Single Circular List"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/interViewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Question"
+        android:textStyle="bold" />
+
 </LinearLayout>

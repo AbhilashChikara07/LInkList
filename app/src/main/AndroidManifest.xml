@@ -35,6 +35,14 @@
         <activity android:name=".DoubleLInkList.DoubleListInsertNodeAtMid" />
         <activity android:name=".DoubleLInkList.DoubleInsertElementAtPosition" />
 
+        <activity android:name=".SingleCircularList.InsertNode"/>
+        <activity android:name=".SingleCircularList.InsertAtMid"/>
+        <activity android:name=".SingleCircularList.InsertLatNode"/>
+        <activity android:name=".SingleCircularList.InsertFirstNode"/>
+        <activity android:name=".SingleCircularList.SingleCircularActivity"/>
+
+        <activity android:name=".Question.InterviewQuestion"/>
+
     </application>
 
 </manifest>

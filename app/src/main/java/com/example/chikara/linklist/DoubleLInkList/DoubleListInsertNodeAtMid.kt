@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.TextView
 import com.example.chikara.linklist.R
 
+
 /**
  * Created by chikara on 1/6/18.
  */
@@ -32,7 +33,7 @@ class DoubleListInsertNodeAtMid : AppCompatActivity() {
     }
 
     private fun loopForInsertValue() {
-        for (i in 0..5) {
+        for (i in 0..9) {
             makeDoubleLinkList(i)
         }
     }
@@ -52,23 +53,26 @@ class DoubleListInsertNodeAtMid : AppCompatActivity() {
 
     private fun displayValue() {
         var tempHead = head
-        var sb = StringBuilder()
+        val sb = StringBuilder()
         while (tempHead != null) {
             sb.append(tempHead.value)
+            sb.append(",")
             tempHead = tempHead.next
         }
         (findViewById(R.id.displayElement) as TextView).text = sb.toString()
     }
 
     private fun insertNodeAtMid() {
-        var slowPointer = head
-        var fastPointer = head?.next?.next
+        var slow_ptr = head
+        var fast_ptr = head
+        if (head != null) {
+            while (fast_ptr != null && fast_ptr.next != null) {
+                fast_ptr = fast_ptr!!.next!!.next
+                slow_ptr = slow_ptr?.next
+            }
+            Log.e("mid node is :- ", "" + slow_ptr?.value)
 
-        while (fastPointer!!.next != null) {
-            slowPointer = slowPointer!!.next
-            fastPointer = fastPointer.next
         }
-        Log.e("mid node is :- ", "" + slowPointer!!.value)
     }
 
 }

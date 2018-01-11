@@ -18,6 +18,7 @@ class DoubleListActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.double_link_list)
 
         findViewById<Button>(R.id.mDeleteMidNode).setOnClickListener(this)
+        findViewById<Button>(R.id.mDisplayMidNode).setOnClickListener(this)
         findViewById<Button>(R.id.mDeleteLastNode).setOnClickListener(this)
         findViewById<Button>(R.id.mInsertNodeAtPos).setOnClickListener(this)
         findViewById<Button>(R.id.mInsertNodeAtEnd).setOnClickListener(this)
