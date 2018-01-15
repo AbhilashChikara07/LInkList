@@ -3,7 +3,6 @@ package com.example.chikara.linklist.SingleLinkList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.example.chikara.linklist.R;
@@ -20,7 +19,7 @@ public class InsertNodeAtPosition extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.link_list_layout);
-        insertionElement();
+        makeList();
         insertNodeAtPosition(2);
     }
 
@@ -34,13 +33,20 @@ public class InsertNodeAtPosition extends AppCompatActivity {
         }
     }
 
-    private void insertionElement() {
-        if (head != null)
-            head = null;
-        head = new NodeClass(1);
-        head.next = new NodeClass(2);
-        head.next.next = new NodeClass(3);
-        head.next.next.next = new NodeClass(4);
+    private void makeList() {
+        for (int i = 0; i < 5; i++) {
+            insertionElement(i);
+        }
+    }
+
+    private void insertionElement(int value) {
+        if (head == null) {
+            head = new NodeClass(value);
+        } else {
+            NodeClass tempNode = new NodeClass(value);
+            tempNode.next = head;
+            head = tempNode;
+        }
         displayValue();
     }
 
@@ -58,13 +64,13 @@ public class InsertNodeAtPosition extends AppCompatActivity {
         NodeClass tempHead = head;
         int count = 0;
         while (tempHead != null) {
-            if (count+1 == position) {
+            if (count + 1 == position) {
                 NodeClass insertNode = new NodeClass(8);
                 insertNode.next = tempHead.next;
                 tempHead.next = insertNode;
                 displayValue();
                 break;
-            }else{
+            } else {
                 count = count + 1;
                 tempHead = tempHead.next;
             }

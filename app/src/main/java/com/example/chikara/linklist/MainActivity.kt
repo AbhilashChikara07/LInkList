@@ -6,15 +6,18 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import com.example.chikara.linklist.DoubleLInkList.DoubleListActivity
-import com.example.chikara.linklist.Question.InterviewQuestion
+import com.example.chikara.linklist.Question.LoopInLinkList
+import com.example.chikara.linklist.Question.RemoveShortListDuplicateElement
+import com.example.chikara.linklist.Question.RemoveUnshortedListDuplicateElement
+import com.example.chikara.linklist.Question.ShortLinkList
 import com.example.chikara.linklist.SingleCircularList.SingleCircularActivity
 import com.example.chikara.linklist.SingleLinkList.SingleListActivity
 
 /**
  * Created by chikara on 12/28/17.
  */
-class MainActivity : AppCompatActivity(), View.OnClickListener {
 
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.interViewQuestion -> {
                 val intent = Intent(this,
-                        InterviewQuestion::class.java)
+                        ShortLinkList::class.java)
                 startActivity(intent)
             }
         }
