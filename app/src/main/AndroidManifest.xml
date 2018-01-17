@@ -41,7 +41,11 @@
         <activity android:name=".SingleCircularList.InsertFirstNode"/>
         <activity android:name=".SingleCircularList.SingleCircularActivity"/>
 
+        <activity android:name=".Question.ShortLinkList"/>
+        <activity android:name=".Question.LoopInLinkList"/>
         <activity android:name=".Question.InterviewQuestion"/>
+        <activity android:name=".Question.RemoveShortListDuplicateElement"/>
+        <activity android:name=".Question.RemoveUnshortedListDuplicateElement"/>
 
     </application>
 

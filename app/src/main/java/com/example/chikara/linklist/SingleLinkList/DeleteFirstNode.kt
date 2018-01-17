@@ -15,7 +15,7 @@ class DeleteFirstNode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.link_list_layout)
-        insertionElement()
+        makeList()
         deleteFirstNode()
         displayValue()
     }
@@ -30,14 +30,21 @@ class DeleteFirstNode : AppCompatActivity() {
         }
     }
 
-    private fun insertionElement() {
-        if (head != null)
-            head = null
-        head = NodeClass(1)
-        head!!.next = NodeClass(2)
-        head!!.next!!.next = NodeClass(3)
-        head!!.next!!.next!!.next = NodeClass(4)
-        head!!.next!!.next!!.next!!.next = NodeClass(5)
+    private fun makeList() {
+        for (i in 0..4) {
+            insertionElement(i)
+        }
+    }
+
+    private fun insertionElement(value: Int) {
+        if (head == null) {
+            head = NodeClass(value)
+        } else {
+            val tempNode = NodeClass(value)
+            tempNode.next = head
+            head = tempNode
+        }
+        displayValue()
     }
 
     private fun deleteFirstNode() {
@@ -47,7 +54,7 @@ class DeleteFirstNode : AppCompatActivity() {
         } else {
             if (tempHead.next != null) {
                 head = tempHead.next
-                tempHead.next=null
+                tempHead.next = null
             }
         }
     }

@@ -122,4 +122,13 @@ class InterviewQuestion : AppCompatActivity() {
         }
         return count
     }
+
+
+
+    /*
+    * Find that Link List have loop
+    * */
+
+
+
 }
