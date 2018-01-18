@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import com.example.chikara.linklist.DoubleLInkList.DoubleListActivity
-import com.example.chikara.linklist.Question.*
+import com.example.chikara.linklist.Question.MergeTwoShortList
 import com.example.chikara.linklist.SingleCircularList.SingleCircularActivity
 import com.example.chikara.linklist.SingleLinkList.SingleListActivity
 
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.interViewQuestion -> {
                 val intent = Intent(this,
-                        ReverseLinkList::class.java)
+                        MergeTwoShortList::class.java)
                 startActivity(intent)
             }
         }

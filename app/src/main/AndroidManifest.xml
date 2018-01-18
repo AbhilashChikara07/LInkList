@@ -44,7 +44,7 @@
         <activity android:name=".Question.ShortLinkList"/>
         <activity android:name=".Question.LoopInLinkList"/>
         <activity android:name=".Question.ReverseLinkList"/>
-        <activity android:name=".Question.InterviewQuestion"/>
+        <activity android:name=".Question.MergeTwoShortList"/>
         <activity android:name=".Question.RemoveShortListDuplicateElement"/>
         <activity android:name=".Question.RemoveUnshortedListDuplicateElement"/>
 
