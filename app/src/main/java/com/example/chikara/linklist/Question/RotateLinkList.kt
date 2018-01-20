@@ -7,19 +7,18 @@ import android.widget.TextView
 import com.example.chikara.linklist.R
 
 /**
- * Created by abhilash on 16/1/18.
+ * Created by abhilash on 19/1/18.
  */
 
-class ReverseLinkList : AppCompatActivity() {
+class RotateLinkList : AppCompatActivity() {
 
     var head: NodeClass? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.link_list_layout)
         makeList()
-        head = reverseLinkList()
-        displayElement()
+        rotateLinkListFromKNode(4)
+        displayElement(head!!)
     }
 
     inner class NodeClass(var tempValue: Int) {
@@ -33,9 +32,13 @@ class ReverseLinkList : AppCompatActivity() {
     }
 
     fun makeList() {
-        for (i in 0..8) {
-            insertionElement(i)
-        }
+        insertionElement(1)
+        insertionElement(2)
+        insertionElement(3)
+        insertionElement(4)
+        insertionElement(3)
+        insertionElement(2)
+        insertionElement(1)
     }
 
     private fun insertionElement(tempValue: Int) {
@@ -48,24 +51,30 @@ class ReverseLinkList : AppCompatActivity() {
         }
     }
 
-    fun reverseLinkList(): NodeClass? {
-        var tempHead = head
-        var slowNode: NodeClass? = null
-        var fastNode: NodeClass? = null
+    fun rotateLinkListFromKNode(kNodeValue: Int) {
+        var tempHead: NodeClass? = null
+        var tempNode = head
+        var tempLastNode: NodeClass? = null
 
-        while (tempHead != null) {
-            fastNode = tempHead.next
-            tempHead.next = slowNode
-            slowNode = tempHead
-            tempHead = fastNode
+        while (tempNode!!.value != kNodeValue) {
+            tempNode = tempNode.next
         }
 
-        return slowNode
+        tempLastNode = tempNode
+
+        while (tempNode!!.next != null) {
+            tempNode = tempNode.next
+        }
+
+        tempNode.next = head
+        tempHead = tempLastNode.next
+        head = tempHead
+        tempLastNode.next = null
     }
 
-    private fun displayElement() {
+    private fun displayElement(tempHead: NodeClass) {
         val textValue = StringBuilder()
-        var tempHead: NodeClass? = head
+        var tempHead: NodeClass? = tempHead
         while (tempHead != null) {
             textValue.append(tempHead.value)
             tempHead = tempHead.next

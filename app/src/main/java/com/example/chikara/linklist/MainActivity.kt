@@ -6,8 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import com.example.chikara.linklist.DoubleLInkList.DoubleListActivity
-import com.example.chikara.linklist.Question.MergeTwoShortList
-import com.example.chikara.linklist.Question.PailandromLinkList
+import com.example.chikara.linklist.Question.DeleteUnshortListDupElementHashing
+import com.example.chikara.linklist.Question.ReverseLinkList
+import com.example.chikara.linklist.Question.RotateLinkList
 import com.example.chikara.linklist.SingleCircularList.SingleCircularActivity
 import com.example.chikara.linklist.SingleLinkList.SingleListActivity
 
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.interViewQuestion -> {
                 val intent = Intent(this,
-                        PailandromLinkList::class.java)
+                        RotateLinkList::class.java)
                 startActivity(intent)
             }
         }

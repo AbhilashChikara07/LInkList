@@ -91,11 +91,11 @@ class InterviewQuestion : AppCompatActivity() {
                 count += 1
             }
         }
-        while (fastNode!=null){
+        while (fastNode != null) {
             fastNode = fastNode.next
             slowNode = slowNode?.next
         }
-        Log.e("Last Node Is :- ",""+slowNode?.value)
+        Log.e("Last Node Is :- ", "" + slowNode?.value)
     }
 
     private fun printLatNthNode(lastNodeNo: Int) {
@@ -124,11 +124,9 @@ class InterviewQuestion : AppCompatActivity() {
     }
 
 
-
     /*
     * Find that Link List have loop
     * */
-
 
 
 }
