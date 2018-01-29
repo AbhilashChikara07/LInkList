@@ -36,4 +36,12 @@
         android:text="Question"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/stackImplementation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Stack"
+        android:textStyle="bold" />
+
 </LinearLayout>

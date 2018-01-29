@@ -51,6 +51,9 @@
         <activity android:name=".Question.DeleteUnshortListDupElementHashing"/>
         <activity android:name=".Question.RemoveUnshortedListDuplicateElement"/>
 
+        <activity android:name=".Stack.StackImplementationByStack"/>
+        <activity android:name=".Stack.DemoClass"/>
+
     </application>
 
 </manifest>
