@@ -43,7 +43,7 @@
 
         <activity android:name=".Question.ShortLinkList"/>
         <activity android:name=".Question.RotateLinkList"/>
-        <activity android:name=".Question.LoopInLinkList"/>
+        <activity android:name=".Question.LoopFindAndRemove"/>
         <activity android:name=".Question.ReverseLinkList"/>
         <activity android:name=".Question.MergeTwoShortList"/>
         <activity android:name=".Question.PailandromLinkList"/>
@@ -53,6 +53,10 @@
 
         <activity android:name=".Stack.StackImplementationByStack"/>
         <activity android:name=".Stack.DemoClass"/>
+        <activity android:name=".Question.DeleteGivenNode"/>
+        <activity android:name=".Question.LengthOfLinkListByRecursiveAndNormal"/>
+        <activity android:name=".Question.SearchElementByResursive"/>
+        <activity android:name=".Question.MiddleNode"/>
 
     </application>
 

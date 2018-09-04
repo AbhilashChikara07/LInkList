@@ -2,7 +2,6 @@ package com.example.chikara.linklist.SingleLinkList
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
 import com.example.chikara.linklist.R
 
 /**
@@ -15,58 +14,40 @@ class DeleteFirstNode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.link_list_layout)
-        makeList()
+        makeLinkList()
         deleteFirstNode()
-        displayValue()
     }
 
-    inner class NodeClass(tempValue: Int) {
+    inner class NodeClass(value: Int) {
         var next: NodeClass? = null
         var value: Int? = null
 
         init {
-            this.value = tempValue
+            this.value = value
             next = null
         }
     }
 
-    private fun makeList() {
+    private fun makeLinkList() {
         for (i in 0..4) {
             insertionElement(i)
         }
     }
 
     private fun insertionElement(value: Int) {
-        if (head == null) {
+        if (head == null)
             head = NodeClass(value)
-        } else {
+        else {
             val tempNode = NodeClass(value)
             tempNode.next = head
             head = tempNode
         }
-        displayValue()
     }
 
     private fun deleteFirstNode() {
-        val tempHead = head
-        if (tempHead == null) {
-            head = NodeClass(1)
-        } else {
-            if (tempHead.next != null) {
-                head = tempHead.next
-                tempHead.next = null
-            }
-        }
-    }
-
-    private fun displayValue() {
-        val sb = StringBuilder()
-        var tempNode = head
-        while (tempNode != null) {
-            sb.append(tempNode.value)
-            tempNode = tempNode.next
-        }
-        (findViewById<TextView>(R.id.displayElement) as TextView).text = sb.toString()
+        val mTempNode = head
+        head = head?.next
+        mTempNode?.next = null
     }
 
 }

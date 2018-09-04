@@ -11,10 +11,10 @@ import com.example.chikara.linklist.R
  * Created by abhilash on 12/1/18.
  */
 
-class LoopInLinkList : AppCompatActivity() {
+class LoopFindAndRemove : AppCompatActivity() {
 
     var head: NodeClass? = null
-    var lastHead: NodeClass? = null
+    var tempHead: NodeClass? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,24 +42,23 @@ class LoopInLinkList : AppCompatActivity() {
     private fun insertionElement(tempValue: Int) {
         if (head == null) {
             head = NodeClass(tempValue)
-            lastHead = head
+            tempHead = head
         } else {
             val tempHead = NodeClass(tempValue)
-            tempHead.next = head
-            head = tempHead
-            if (tempValue == 5) {
-                lastHead?.next = tempHead.next?.next
-            }
+            this.tempHead!!.next = tempHead
+            tempHead.next = this.tempHead
+            this.tempHead = tempHead
+
         }
     }
 
     private fun findLoopInLinkList() {
-        var fastNode = head
-        var slowNode = head
+        var fastNode: NodeClass? = head
+        var slowNode: NodeClass? = head
 
         while (fastNode != null && slowNode != null) {
-            fastNode = fastNode.next?.next
-            slowNode = slowNode.next
+            fastNode = fastNode?.next?.next
+            slowNode = slowNode?.next
 
             if (slowNode == fastNode) {
                 Log.e("Loop status :- ", "Loop in link list")
@@ -70,16 +69,18 @@ class LoopInLinkList : AppCompatActivity() {
     }
 
     private fun removeLoop(slowNode: NodeClass) {
-        var slowOne: NodeClass? = slowNode
-        val slowTwo: NodeClass? = slowNode
-        while (slowOne?.next != slowNode) {
-            slowOne = slowOne?.next
+        var mTempSlowNode = slowNode
+        var mTempFastNode = slowNode
+        var mTempHead = head
+
+        while (mTempHead != mTempSlowNode) {
+            mTempFastNode = mTempSlowNode
+            mTempHead = mTempHead?.next
+            mTempSlowNode = mTempSlowNode.next!!
         }
-        while (slowTwo?.next != slowOne) {
-            slowTwo?.next = null
-            displayElement()
-            break
-        }
+
+        mTempFastNode.next = null
+        displayElement()
     }
 
     private fun displayElement() {
