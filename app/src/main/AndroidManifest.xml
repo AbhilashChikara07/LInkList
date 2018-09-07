@@ -57,6 +57,7 @@
         <activity android:name=".Question.LengthOfLinkListByRecursiveAndNormal"/>
         <activity android:name=".Question.SearchElementByResursive"/>
         <activity android:name=".Question.MiddleNode"/>
+        <activity android:name=".Question.RemoveDuplicateFromShortedList"/>
 
     </application>
 

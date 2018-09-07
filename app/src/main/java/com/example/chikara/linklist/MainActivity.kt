@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.mQuestionActivity -> {
                 val intent = Intent(this,
-                        LoopFindAndRemove::class.java)
+                        RemoveDuplicateFromShortedList::class.java)
                 startActivity(intent)
             }
         }

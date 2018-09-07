@@ -9,8 +9,14 @@ import com.example.chikara.linklist.R
  * Created by abhilash on 18/1/18.
  */
 
+/*
+*
+* */
+
 class PailandromLinkList : AppCompatActivity() {
+
     var head: NodeClass? = null
+    var tempHead: NodeClass? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,11 +50,13 @@ class PailandromLinkList : AppCompatActivity() {
     private fun insertionElement(tempValue: Int) {
         if (head == null) {
             head = NodeClass(tempValue)
+            tempHead = head
         } else {
             val tempHead = NodeClass(tempValue)
-            tempHead.next = head
-            head = tempHead
+            this.tempHead!!.next = tempHead
+            this.tempHead = tempHead
         }
+
     }
 
 
@@ -61,12 +69,32 @@ class PailandromLinkList : AppCompatActivity() {
             fastNode = fastNode.next!!.next
         }
 
+        /*
+        * To check rest length is even or not we have two methods.
+        * */
+
+        /*
+        * METHOD -1
+        * */
+        if (fastNode!!.next == null)
+            removeMidNode(slowNode)
+        else {
+            fastNode = slowNode
+            reverseList(fastNode)
+
+        }
+
+        /*
+        * METHOD -2
+        * */
+
         if (isEven(slowNode)) {
             removeMidNode(slowNode)
         } else {
             fastNode = slowNode
             reverseList(fastNode)
         }
+
     }
 
     private fun removeMidNode(tempList: NodeClass?) {
@@ -80,7 +108,7 @@ class PailandromLinkList : AppCompatActivity() {
     }
 
 
-    fun reverseList(tempList: NodeClass?) {
+    private fun reverseList(tempList: NodeClass?) {
         var currentNode: NodeClass? = tempList
         var slowNode: NodeClass? = null
         var fastNode: NodeClass? = null
@@ -95,7 +123,8 @@ class PailandromLinkList : AppCompatActivity() {
         checkIsPailondromOrNot(slowNode!!)
     }
 
-    fun checkIsPailondromOrNot(secondList: NodeClass) {
+
+    private fun checkIsPailondromOrNot(secondList: NodeClass) {
 
         var pNode = head
         var qNode = secondList
@@ -114,7 +143,7 @@ class PailandromLinkList : AppCompatActivity() {
         }
     }
 
-    fun isEven(slowNode: NodeClass? = null): Boolean {
+    private fun isEven(slowNode: NodeClass? = null): Boolean {
         var count: Int? = 0
         var tempHead = slowNode
         while (tempHead != null) {
