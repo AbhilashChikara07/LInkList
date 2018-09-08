@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.mQuestionActivity -> {
                 val intent = Intent(this,
-                        RemoveDuplicateFromShortedList::class.java)
+                        InterSectionOfTwoList::class.java)
                 startActivity(intent)
             }
         }
