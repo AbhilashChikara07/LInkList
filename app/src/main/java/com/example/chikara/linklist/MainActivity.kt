@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.mQuestionActivity -> {
                 val intent = Intent(this,
-                        InterSectionOfTwoList::class.java)
+                        MergeShort::class.java)
                 startActivity(intent)
             }
         }

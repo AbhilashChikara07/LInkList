@@ -61,6 +61,7 @@
         <activity android:name=".Question.PairWiseSwipe"/>
         <activity android:name=".Question.MakeLastNodeAsHead"/>
         <activity android:name=".Question.InterSectionOfTwoList"/>
+        <activity android:name=".Question.MergeShort"/>
 
     </application>
 
