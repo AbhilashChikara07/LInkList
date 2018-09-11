@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.mQuestionActivity -> {
                 val intent = Intent(this,
-                        MergeShort::class.java)
+                        SeparateEvenAndOddNode::class.java)
                 startActivity(intent)
             }
         }

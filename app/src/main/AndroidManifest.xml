@@ -62,6 +62,7 @@
         <activity android:name=".Question.MakeLastNodeAsHead"/>
         <activity android:name=".Question.InterSectionOfTwoList"/>
         <activity android:name=".Question.MergeShort"/>
+        <activity android:name=".Question.SeparateEvenAndOddNode"/>
 
     </application>
 
