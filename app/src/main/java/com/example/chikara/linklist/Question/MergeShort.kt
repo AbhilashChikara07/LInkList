@@ -2,6 +2,7 @@ package com.example.chikara.linklist.Question
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.example.chikara.linklist.R
@@ -34,7 +35,7 @@ class MergeShort : AppCompatActivity() {
         insertionElement(7)
         insertionElement(1)
 
-       val mTempHead = mergeShortAlgo(head)
+        val mTempHead = mergeShortAlgo(head)
         displayElement(mTempHead)
     }
 
@@ -50,6 +51,8 @@ class MergeShort : AppCompatActivity() {
     }
 
     private fun mergeShortAlgo(mList: NodeClass?): NodeClass {
+
+        displayElement(mList)
 
         var mTempList = mList
 
@@ -71,6 +74,10 @@ class MergeShort : AppCompatActivity() {
     }
 
     private fun mergeShort(pHead: NodeClass?, qHead: NodeClass?): NodeClass? {
+
+//        displayElement(pHead)
+//        displayElement(qHead)
+
         var pHead = pHead
         var qHead = qHead
         var shortListHead: NodeClass? = null
@@ -118,6 +125,7 @@ class MergeShort : AppCompatActivity() {
             textValue.append(tempHead.data)
             tempHead = tempHead.next
         }
+        Log.e("LIST IS :- ", ""+textValue.toString())
         (findViewById<View>(R.id.displayElement) as TextView).text = textValue.toString()
     }
 

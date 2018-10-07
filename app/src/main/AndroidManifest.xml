@@ -63,6 +63,8 @@
         <activity android:name=".Question.InterSectionOfTwoList"/>
         <activity android:name=".Question.MergeShort"/>
         <activity android:name=".Question.SeparateEvenAndOddNode"/>
+        <activity android:name=".Question.LinkedList"/>
+        <activity android:name=".Question.LruImplementation"/>
 
     </application>
 
