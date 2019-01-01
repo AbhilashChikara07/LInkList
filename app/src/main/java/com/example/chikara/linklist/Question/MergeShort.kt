@@ -29,11 +29,11 @@ class MergeShort : AppCompatActivity() {
 
     private fun makeList() {
 
-        insertionElement(9)
-        insertionElement(5)
-        insertionElement(2)
-        insertionElement(7)
         insertionElement(1)
+        insertionElement(10)
+        insertionElement(2)
+        insertionElement(9)
+        insertionElement(3)
 
         val mTempHead = mergeShortAlgo(head)
         displayElement(mTempHead)
@@ -123,6 +123,7 @@ class MergeShort : AppCompatActivity() {
         var tempHead: NodeClass? = tempHead
         while (tempHead != null) {
             textValue.append(tempHead.data)
+            textValue.append(",")
             tempHead = tempHead.next
         }
         Log.e("LIST IS :- ", ""+textValue.toString())

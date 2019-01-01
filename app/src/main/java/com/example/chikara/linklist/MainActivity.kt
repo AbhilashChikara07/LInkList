@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.interViewQuestion -> {
                 val intent = Intent(this,
-                        RotateLinkList::class.java)
+                        FlattenLinkList::class.java)
                 startActivity(intent)
             }
             R.id.stackImplementation -> {

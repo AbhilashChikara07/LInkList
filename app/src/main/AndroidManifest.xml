@@ -65,6 +65,7 @@
         <activity android:name=".Question.SeparateEvenAndOddNode"/>
         <activity android:name=".Question.LinkedList"/>
         <activity android:name=".Question.LruImplementation"/>
+        <activity android:name=".Question.FlattenLinkList"/>
 
     </application>
 
