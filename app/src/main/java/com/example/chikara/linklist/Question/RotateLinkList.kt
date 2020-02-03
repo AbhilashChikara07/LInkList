@@ -51,7 +51,7 @@ class RotateLinkList : AppCompatActivity() {
         }
     }
 
-    fun rotateLinkListFromKNode(kNodeValue: Int) {
+    private fun rotateLinkListFromKNode(kNodeValue: Int) {
         var tempHead: NodeClass? = null
         var tempNode = head
         var tempLastNode: NodeClass? = null

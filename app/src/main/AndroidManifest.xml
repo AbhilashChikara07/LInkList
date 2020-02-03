@@ -66,6 +66,8 @@
         <activity android:name=".Question.LinkedList"/>
         <activity android:name=".Question.LruImplementation"/>
         <activity android:name=".Question.FlattenLinkList"/>
+        <activity android:name=".Question.SwipePairWise"/>
+        <activity android:name="com.example.chikara.linklist.Question.MergeTwoListOnAlteration"/>
 
     </application>
 

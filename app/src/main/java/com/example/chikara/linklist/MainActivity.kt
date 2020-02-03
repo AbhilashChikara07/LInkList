@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.mSingleLinkList -> {
                 val intent = Intent(this,
-                        SingleListActivity::class.java)
+                        MergeTwoListOnAlteration::class.java)
                 startActivity(intent)
             }
             R.id.mDoubleLinkList -> {

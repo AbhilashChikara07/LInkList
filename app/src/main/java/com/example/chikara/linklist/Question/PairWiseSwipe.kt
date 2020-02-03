@@ -33,9 +33,11 @@ class PairWiseSwipe : AppCompatActivity() {
         insertionElement(3)
         insertionElement(4)
         insertionElement(5)
+        insertionElement(6)
 
 //        swipePairWiseElement()
         swipeElementOnDff(head, 2)
+        head = swipeAfterDiff()
     }
 
     private fun insertionElement(tempValue: Int) {
@@ -69,32 +71,42 @@ class PairWiseSwipe : AppCompatActivity() {
 
     private fun swipeElementOnDff(mTempNode: NodeClass?, mDiffValue: Int) {
 
-        var mSlowNode: NodeClass? = mTempNode
-        var mFastNode: NodeClass? = mTempNode
+        var mTempNode: NodeClass? = mTempNode
         var mTempDiffValue = 0
 
-        while (mFastNode?.next != null) {
+        while (mTempNode?.next != null) {
 
             while (mTempDiffValue != mDiffValue) {
-                mFastNode = mFastNode?.next
+                mTempNode = mTempNode?.next
                 mTempDiffValue += 1
             }
 
-            if (mFastNode != null) {
-                val x = mSlowNode?.data
-                mSlowNode?.data = mFastNode.data
-                mFastNode.data = x
+            if (mTempNode != null) {
+                val x = mTempNode.data
+                mTempNode.data = mTempNode.next!!.data
+                mTempNode.next!!.data = x
 
-                mFastNode = mFastNode.next
-                mSlowNode = mFastNode!!
                 mTempDiffValue = 0
-
             }
-
         }
 
         displayValue()
 
+    }
+
+
+    private fun swipeAfterDiff(): NodeClass? {
+        var current = head
+        var slow: NodeClass? = null
+        var fast: NodeClass? = null
+
+        while (current != null) {
+            fast = current.next
+            current.next = slow
+            slow = current
+            current = fast!!
+        }
+        return slow
     }
 
     private fun displayValue() {
