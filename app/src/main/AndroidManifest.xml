@@ -68,6 +68,8 @@
         <activity android:name=".Question.FlattenLinkList"/>
         <activity android:name=".Question.SwipePairWise"/>
         <activity android:name="com.example.chikara.linklist.Question.MergeTwoListOnAlteration"/>
+        <activity android:name=".Question.DeleteLeftSmallNode"/>
+        <activity android:name=".Question.ReverseLinkListInGroup"/>
 
     </application>
 
