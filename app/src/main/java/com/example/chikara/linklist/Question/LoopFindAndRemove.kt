@@ -57,8 +57,8 @@ class LoopFindAndRemove : AppCompatActivity() {
         var slowNode: NodeClass? = head
 
         while (fastNode != null && slowNode != null) {
-            fastNode = fastNode?.next?.next
-            slowNode = slowNode?.next
+            fastNode = fastNode.next?.next
+            slowNode = slowNode.next
 
             if (slowNode == fastNode) {
                 Log.e("Loop status :- ", "Loop in link list")
@@ -68,18 +68,21 @@ class LoopFindAndRemove : AppCompatActivity() {
         }
     }
 
-    private fun removeLoop(slowNode: NodeClass) {
-        var mTempSlowNode = slowNode
-        var mTempFastNode = slowNode
-        var mTempHead = head
-
-        while (mTempHead != mTempSlowNode) {
-            mTempFastNode = mTempSlowNode
-            mTempHead = mTempHead?.next
-            mTempSlowNode = mTempSlowNode.next!!
+    private fun removeLoop(loopNode: NodeClass) {
+        var slow = loopNode
+        var tempHead = head
+        while (slow.next != loopNode) {
+            slow = slow.next!!
         }
 
-        mTempFastNode.next = null
+        while (tempHead != slow) {
+            tempHead = tempHead!!.next
+        }
+
+        while (slow.next != tempHead) {
+            slow = slow.next!!
+        }
+        slow.next = null
         displayElement()
     }
 

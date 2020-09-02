@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.mSingleLinkList -> {
                 val intent = Intent(this,
-                        ReverseLinkListInGroup::class.java)
+                        LoopFindAndRemove::class.java)
                 startActivity(intent)
             }
             R.id.mDoubleLinkList -> {

@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 
 class HashTableClass : AppCompatActivity() {
 
-    var vv:HashMap<>
+//    var vv:HashMap<>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
