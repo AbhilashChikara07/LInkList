@@ -13,6 +13,7 @@ import com.example.chikara.linklist.R
 
 class LoopFindAndRemove : AppCompatActivity() {
 
+    var loop: NodeClass? = null
     var head: NodeClass? = null
     var tempHead: NodeClass? = null
 
@@ -34,7 +35,7 @@ class LoopFindAndRemove : AppCompatActivity() {
     }
 
     fun makeList() {
-        for (i in 0..5) {
+        for (i in 1..6) {
             insertionElement(i)
         }
     }
@@ -46,10 +47,12 @@ class LoopFindAndRemove : AppCompatActivity() {
         } else {
             val tempHead = NodeClass(tempValue)
             this.tempHead!!.next = tempHead
-            tempHead.next = this.tempHead
             this.tempHead = tempHead
-
         }
+        if (4 == tempValue)
+            loop = tempHead
+        if (6 == tempValue)
+            tempHead!!.next = loop
     }
 
     private fun findLoopInLinkList() {
@@ -71,13 +74,17 @@ class LoopFindAndRemove : AppCompatActivity() {
     private fun removeLoop(loopNode: NodeClass) {
         var slow = loopNode
         var tempHead = head
-        while (slow.next != loopNode) {
+        while (slow != loopNode) {
             slow = slow.next!!
+            tempHead = tempHead?.next
         }
 
         while (tempHead != slow) {
             tempHead = tempHead!!.next
+            slow = slow.next!!
         }
+
+        tempHead
 
         while (slow.next != tempHead) {
             slow = slow.next!!

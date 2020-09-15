@@ -9,7 +9,7 @@ import com.example.chikara.linklist.DoubleLInkList.DoubleListActivity
 import com.example.chikara.linklist.Question.*
 import com.example.chikara.linklist.SingleCircularList.SingleCircularActivity
 import com.example.chikara.linklist.SingleLinkList.SingleListActivity
-import com.example.chikara.linklist.Stack.DemoClass
+import com.example.chikara.linklist.Stack.*
 
 /**
  * Created by chikara on 12/28/17.
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.mSingleLinkList -> {
                 val intent = Intent(this,
-                        LoopFindAndRemove::class.java)
+                        ImplementStackUsingSingleQueue::class.java)
                 startActivity(intent)
             }
             R.id.mDoubleLinkList -> {

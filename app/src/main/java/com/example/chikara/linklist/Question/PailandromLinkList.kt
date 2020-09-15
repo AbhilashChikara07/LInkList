@@ -88,7 +88,7 @@ class PailandromLinkList : AppCompatActivity() {
         * METHOD -2
         * */
 
-        if (isEven(slowNode)) {
+        if (!isEven(slowNode)) {
             removeMidNode(slowNode)
         } else {
             fastNode = slowNode

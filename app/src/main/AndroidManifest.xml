@@ -53,6 +53,14 @@
 
         <activity android:name=".Stack.StackImplementationByStack"/>
         <activity android:name=".Stack.DemoClass"/>
+        <activity android:name=".Stack.QueueUsingStacks"/>
+        <activity android:name=".Stack.SpecialStackDataStructure"/>
+        <activity android:name=".Stack.ImplementTwoStacksInAnArray"/>
+        <activity android:name=".Stack.ImplementStackUsingQueues"/>
+        <activity android:name=".Stack.DesignStackWithOperationsOnMiddleElement"/>
+        <activity android:name=".Stack.DesignStackThatSupportsGetMin"/>
+        <activity android:name=".Stack.ImplementStackUsingSingleQueue"/>
+
         <activity android:name=".Question.DeleteGivenNode"/>
         <activity android:name=".Question.LengthOfLinkListByRecursiveAndNormal"/>
         <activity android:name=".Question.SearchElementByResursive"/>
@@ -71,6 +79,16 @@
         <activity android:name=".Question.DeleteLeftSmallNode"/>
         <activity android:name=".Question.ReverseLinkListInGroup"/>
         <activity android:name=".Question.Demo"/>
+        <activity android:name=".Question.DeleteMidNode"/>
+        <activity android:name=".Question.ReverseAlternateNodeInGroup"/>
+        <activity android:name=".Question.DeleteAltNode"/>
+        <activity android:name=".Question.IdenticalOfList"/>
+        <activity android:name=".Question.DeleteNodesWhichHaveGreaterValueOnRightSide"/>
+        <activity android:name=".Question.AddTwoNumbersRepresentedByLinked"/>
+        <activity android:name=".Question.RearrangeAGivenLinkedListInPlace"/>
+        <activity android:name=".Question.CloneLinkedList"/>
+        <activity android:name=".Question.RearrangeLinkedListInZigZagFashion"/>
+
 
     </application>
 
