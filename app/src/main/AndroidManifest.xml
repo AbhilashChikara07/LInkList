@@ -60,6 +60,12 @@
         <activity android:name=".Stack.DesignStackWithOperationsOnMiddleElement"/>
         <activity android:name=".Stack.DesignStackThatSupportsGetMin"/>
         <activity android:name=".Stack.ImplementStackUsingSingleQueue"/>
+        <activity android:name=".Stack.InfixToPostfix"/>
+        <activity android:name=".Stack.PreFixToInfix"/>
+        <activity android:name=".Stack.PreFixToPostFixConversion"/>
+        <activity android:name=".Stack.ReverseStackUsingRecursion"/>
+        <activity android:name=".Stack.SortStackUsingRecursion"/>
+        <activity android:name=".Stack.LruImplementation"/>
 
         <activity android:name=".Question.DeleteGivenNode"/>
         <activity android:name=".Question.LengthOfLinkListByRecursiveAndNormal"/>

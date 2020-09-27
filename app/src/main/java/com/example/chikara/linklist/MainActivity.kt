@@ -10,6 +10,7 @@ import com.example.chikara.linklist.Question.*
 import com.example.chikara.linklist.SingleCircularList.SingleCircularActivity
 import com.example.chikara.linklist.SingleLinkList.SingleListActivity
 import com.example.chikara.linklist.Stack.*
+import com.example.chikara.linklist.Stack.LruImplementation
 
 /**
  * Created by chikara on 12/28/17.
@@ -27,13 +28,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         (findViewById<Button>(R.id.mSingleCircularList)).setOnClickListener(this)
         (findViewById<Button>(R.id.stackImplementation)).setOnClickListener(this)
         (findViewById<Button>(R.id.mQuestionActivity)).setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.mSingleLinkList -> {
                 val intent = Intent(this,
-                        ImplementStackUsingSingleQueue::class.java)
+                        LruImplementation::class.java)
                 startActivity(intent)
             }
             R.id.mDoubleLinkList -> {
@@ -63,4 +65,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
 }

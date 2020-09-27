@@ -38,14 +38,13 @@ class LruImplementation : AppCompatActivity() {
         }
     }
 
+    private fun getNode(value: Int): NodeClass = NodeClass(value)
 
     private fun insertValueInList(value: Int) {
-
         if (mHead == null) {
             mHead = getNode(value)
             mLastHead = mHead
             mHashMap?.put(value, mHead!!)
-
         } else {
             if (mHashMap?.size!! < 4) {
                 val mTempNode = getNode(value)
@@ -64,7 +63,6 @@ class LruImplementation : AppCompatActivity() {
         }
     }
 
-    private fun getNode(value: Int): NodeClass = NodeClass(value)
 
     private fun displayElement(tempHead: NodeClass?) {
         val textValue = StringBuilder()
